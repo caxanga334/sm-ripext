@@ -35,7 +35,6 @@ jobs:
           python-version: 3.13
 
       - name: Setup AMBuild
-        if: runner.os == 'Windows'
         run: |
           python -m pip install --upgrade pip setuptools wheel
           pip install git+https://github.com/alliedmodders/ambuild
