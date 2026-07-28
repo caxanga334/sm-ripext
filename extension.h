@@ -25,7 +25,11 @@
 #include <string>
 #include <curl/curl.h>
 #include <jansson.h>
+#if SMINTERFACE_EXTENSIONAPI_VERSION >= 9
+#include <sm_hashmap.h>
+#else
 #include <sm_stringhashmap.h>
+#endif // SMINTERFACE_EXTENSIONAPI_VERSION >= 9
 #include <stdlib.h>
 #include <string.h>
 #include <uv.h>
