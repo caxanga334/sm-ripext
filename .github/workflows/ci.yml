@@ -17,7 +17,7 @@ jobs:
           - target-archs: x86,x86_64
 
           - os: ubuntu-latest
-            container_image: ghcr.io/alliedmodders/build-containers/debian9:latest
+            container_image: ghcr.io/alliedmodders/build-containers/debian11:latest
     steps:
       # Largely a workaround for issue where github.workspace doesn't match $GITHUB_WORKSPACE
       # in containerized jobs. See https://github.com/actions/runner/issues/2058
