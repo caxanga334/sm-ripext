@@ -25,15 +25,16 @@
 #include <string>
 #include <curl/curl.h>
 #include <jansson.h>
+#include <stdlib.h>
+#include <string.h>
+#include <uv.h>
+#include "smsdk_ext.h"
+// Detect 1.13, needs to be after smsdk_ext.h
 #if SMINTERFACE_EXTENSIONAPI_VERSION >= 9
 #include <sm_hashmap.h>
 #else
 #include <sm_stringhashmap.h>
 #endif // SMINTERFACE_EXTENSIONAPI_VERSION >= 9
-#include <stdlib.h>
-#include <string.h>
-#include <uv.h>
-#include "smsdk_ext.h"
 
 #define SM_RIPEXT_CA_BUNDLE_PATH "configs/ripext/ca-bundle.crt"
 #define SM_RIPEXT_USER_AGENT "sm-ripext/" SMEXT_CONF_VERSION
