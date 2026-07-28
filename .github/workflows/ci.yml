@@ -74,8 +74,10 @@ jobs:
       - name: Package
         run: |
           version=`echo $GITHUB_REF | sed "s/refs\/tags\///"`
-          7z a sm-ripext-${version}-linux.zip ./Linux/*
-          7z a sm-ripext-${version}-windows.zip ./Windows/*
+          7z a sm-ripext-${version}-sm-1.12-linux.zip ./Linux-1.12-dev/*
+          7z a sm-ripext-${version}-sm-1.13-linux.zip ./Linux-master/*
+          7z a sm-ripext-${version}-sm-1.13-windows.zip ./Windows-1.12-dev/*
+          7z a sm-ripext-${version}-sm-1.13-windows.zip ./Windows-master/*
 
       - name: Release
         uses: svenstaro/upload-release-action@v2
