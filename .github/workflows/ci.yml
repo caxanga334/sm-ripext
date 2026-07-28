@@ -63,7 +63,7 @@ jobs:
           ambuild
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: ${{ runner.os }}-${{ matrix.sourcemod-version }}
           path: extension/build/package
@@ -77,7 +77,7 @@ jobs:
 
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8.0.1
 
       - name: Package
         run: |
